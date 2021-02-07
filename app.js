@@ -30,7 +30,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
             `
             foodDiv.innerHTML = foodInfo;
             foodsDiv.appendChild(foodDiv);
-
+            foodInput.value='';
         });
     }
 
@@ -51,6 +51,7 @@ const renderFoodInfo = meal => {
     const foodIngredientDiv = document.getElementById('foodIngredient');
     const foodsDiv = document.getElementById('foods');
     foodsDiv.innerHTML = '';
+
     foodIngredientDiv.innerHTML = `
         <img src="${meal.meals[0].strMealThumb}">
         <h1>${meal.meals[0].strMeal}</h1>
